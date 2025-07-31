@@ -62,15 +62,18 @@ class LinkedList<T>{
 
 public class genericLinkedList {
     public static void main(String[] args) {
-        LinkedList<Integer> il = new LinkedList<Integer>();
+        LinkedList<Employee> il = new LinkedList<Employee>();
         System.out.println("1->Insert ; 2->Remove ; 3->Print ; 4->Exit");
         Scanner sc = new Scanner(System.in);
         for(;;){//while(true)
             int n = sc.nextInt();
             switch(n){
                 case 1:
-                int data = sc.nextInt();
-                    il.insertAtBeginning(data);
+                    int id = sc.nextInt();
+                    String name = sc.next();
+                    Employee e = new Employee(id,name);
+                    il.insertAtBeginning(e);
+                    sc.close();
                     break;
                 case 2:
                     il.deleteFromFirst();
