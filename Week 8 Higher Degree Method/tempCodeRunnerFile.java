@@ -1,0 +1,1 @@
+CompareByRoll cr = new CompareByRoll();
