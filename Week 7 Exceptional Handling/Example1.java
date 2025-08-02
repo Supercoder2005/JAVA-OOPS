@@ -8,8 +8,17 @@ public class Example1 {
         }
         //catch block is used to specify which error/exception you have made 
         catch(ArithmeticException e){ // here ArithmeticException is the exception class and e is object of that class
+            // if you don't know the specified exception subclass name , you can use the parent vlass Exception 
             System.out.println(e);
             System.out.println(e.getMessage());
+        }
+
+        try{
+            int c=100,d=0;
+            int val = c/d;
+        }
+        catch(Exception e){
+            System.out.println(e);
         }
     }
 }
