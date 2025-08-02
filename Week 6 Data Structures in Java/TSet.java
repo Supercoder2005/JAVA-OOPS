@@ -1,7 +1,6 @@
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class TSet {
     public static void main(String[] args) {
