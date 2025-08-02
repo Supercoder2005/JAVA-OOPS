@@ -7,6 +7,7 @@ public class Example3 {
         catch(ArithmeticException e){
             System.out.println("Exception caught: "+ e.getMessage());
         }
+        // finally will be executed both when exception occurs or not 
         finally{
             System.out.println("Inside finally block - Division attempt finished.");
         }
