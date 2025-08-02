@@ -14,7 +14,7 @@ public class SimpleLoggerExample {
         }
         logger.warning("This is a warning message.");
         logger.log(Level.INFO,"Application finished.");
-        logger.log(Level.INFO,"Terminated.");
+        logger.log(Level.FINE,"Terminated.");
     }
     public static void endProcess(){
         logger.log(Level.WARNING,"This is a warning message");
@@ -26,6 +26,7 @@ public class SimpleLoggerExample {
     public static void main(String[] args) {
         process();
         logger.setLevel(Level.ALL);
+        // logger.setLevel(Level.OFF);
         endProcess();
     }
 }
