@@ -1,5 +1,6 @@
 package package1;
 
+// only we can import a public class through <package_name.class_name> in another package 
 public class A {
     // when no access specifier is mention those methods can be accessed through any java files present inside of a particular package , but not from other package 
     void AMethod(){
