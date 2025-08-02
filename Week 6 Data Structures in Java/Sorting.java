@@ -10,7 +10,7 @@ class Fighter implements Comparable<Fighter>{
         this.wins = wins;
     }
     public int compareTo(Fighter obj){ // if this.obj < parameter.obj : returns -ve value 
-        return (obj.wins - this.wins); // if this.obj > parameter.obj : returns +ve value 
+        return (this.wins - obj.wins); // if this.obj > parameter.obj : returns +ve value 
     }                                  // if this.obj < parameter.obj : returns 0 value 
     public String toString(){
         return "\n name: "+name+" , wins: "+wins;
@@ -28,6 +28,7 @@ class Sorting{
         System.out.println(fighters);
 
         Collections.sort(fighters); // Collections is a public class & Collection is a interface in java
+        // by default this sort function is sorting the elements in ascending order 
         System.out.println(fighters);
 
     }
