@@ -29,6 +29,7 @@ class Sorting{
 
         Collections.sort(fighters); // Collections is a public class & Collection is a interface in java
         // by default this sort function is sorting the elements in ascending order 
+        
         System.out.println(fighters);
 
     }
