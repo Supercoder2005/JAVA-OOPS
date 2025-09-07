@@ -1,7 +1,10 @@
+// Bank Account (program uses a constructor that demonstrates the initialization of account holder's name and balance)
+
 package PCA1.Constructor;
 class BankAccount{
     String name;
     double balance;
+    // parameterized constructor
     public BankAccount(String name,double balance){
         this.name = name;
         this.balance = balance;
