@@ -1,67 +1,64 @@
 import java.util.*;
 // Interface
-interface StackOperations{
+interface StackOps{
     void push(int item);
     int pop();
     int peek();
     boolean isEmpty();
     void display();
 }
-// Abstract class
-abstract class AbstractStack implements StackOperations{
-    protected int[] stack;
+// Abstract class 
+abstract class AbstractStack implements StackOps{
     protected int top = -1;
+    protected int[] stack;
     public AbstractStack(int size){
         stack = new int[size];
     }
 }
-
-// class to define all the stack operations
-class MyStack extends AbstractStack {
-    // constructor
+// class to define all stack operations
+class MyStack extends AbstractStack{
     public MyStack(int size){
         super(size);
     }
-    // push 
     public void push(int item){
-        if(top == stack.length - 1)
-            System.out.println("Overflow");
+        if(top == stack.length - 1){
+            System.out.println("Overflow !");
+        }
         else{
             top ++;
             stack[top] = item;
         }
     }
-    // pop 
     public int pop(){
-        if(top == -1) {
-            System.out.println("Underflow");
+        if(top == -1){
+            System.out.println("Underflow !");
             return -1;
-        } 
-        else {
+        }
+        else{
             return stack[top--];
         }
     }
-    // peek
     public int peek(){
         if(top == -1){
-            System.out.println("Underflow");
+            System.out.println("Underflow !");
             return -1;
         }
         else{
             return stack[top];
         }
     }
-    // isEmpty
     public boolean isEmpty(){
-        if(top == -1)
+        if(top == -1){
             return true;
-        else
+        }
+        else{
             return false;
+        }
     }
-    // display
     public void display(){
-        if(isEmpty())
-            System.out.println("The stack is empty");
+        if(isEmpty()){
+            System.out.println("Stack is empty.");
+        }
         else{
             for(int i=top;i>-1;i--){
                 System.out.print("\t"+stack[i]);
@@ -70,37 +67,36 @@ class MyStack extends AbstractStack {
         System.out.println();
     }
 }
-
-// Main class
-public class StackMain{
+// main class
+public class StackMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter stack size:");
+        System.out.println("Enter the stack size:");
         int size = sc.nextInt();
 
         MyStack s = new MyStack(size);
-
         do{
+            System.out.println("----Stack Operations----");
             System.out.println("1.Push 2.Pop 3.Peek 4.IsEmpty 5.Display 6.Exit");
             System.out.println("Enter your choice:");
-            int choice = sc.nextInt();
-            switch(choice){
+            int ch = sc.nextInt();
+            switch(ch){
                 case 1:
-                    System.out.println("Enter item : ");
+                    System.out.println("Enter item:");
                     int item = sc.nextInt();
                     s.push(item);
                     break;
                 case 2:
-                    System.out.println("Popped item is : "+s.pop());
+                    System.out.println("Popped item : "+s.pop());
                     break;
                 case 3:
-                    System.out.println("Top element of the stack : "+s.peek());
+                    System.out.println("Top element of stack :"+s.peek());
                     break;
                 case 4:
                     System.out.println("Is the stack empty ? "+s.isEmpty());
                     break;
                 case 5:
-                    System.out.println("Stack elements ----");
+                    System.out.println("The stack elements : ");
                     s.display();
                     break;
                 case 6:
