@@ -25,6 +25,7 @@ public class toughQs2 {
         }
         return (avg/marks.length);
     }
+
     static String grade(double mark){
         if(mark>=90 && mark<=100){
             return "A+";
@@ -41,7 +42,6 @@ public class toughQs2 {
         else{
             return "Fail";
         }
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
